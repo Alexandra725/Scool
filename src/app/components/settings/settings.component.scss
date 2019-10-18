@@ -1,0 +1,289 @@
+
+// SETTING DESPLEGABLE
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+@import url('https://fonts.googleapis.com/css?family=Titan+One');
+
+
+$yellow  : #ffc901;
+$font    : 'Titan One', san-serif;
+
+@mixin base-font($size) {
+    font-size: $size;
+    font-family: $font;
+}
+
+.menu-container {
+    background-color: transparent;
+    color:white;
+    cursor: pointer;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: -20px;
+    top: 0;
+    transition: all 0.3s;
+  
+    &.full-menu {
+        border-radius: 0;
+        background: rgba(3,245,233,1);
+        background: -moz-linear-gradient(-45deg, rgba(3,245,233,1) 0%, rgba(3,245,233,1) 43%, rgba(0,85,255,1) 100%);
+        background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(3,245,233,1)), color-stop(43%, rgba(3,245,233,1)), color-stop(100%, rgba(0,85,255,1)));
+        background: -webkit-linear-gradient(-45deg, rgba(3,245,233,1) 0%, rgba(3,245,233,1) 43%, rgba(0,85,255,1) 100%);
+        background: -o-linear-gradient(-45deg, rgba(3,245,233,1) 0%, rgba(3,245,233,1) 43%, rgba(0,85,255,1) 100%);
+        background: -ms-linear-gradient(-45deg, rgba(3,245,233,1) 0%, rgba(3,245,233,1) 43%, rgba(0,85,255,1) 100%);
+        background: linear-gradient(135deg, rgba(3,245,233,1) 0%, rgba(3,245,233,1) 43%, rgba(0,85,255,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#03f5e9', endColorstr='#0055ff', GradientType=1 );
+        padding-top: 0 !important;
+        position: aboslute;
+        width: 100%;
+        height: 120%;
+        left: 0;
+        top: 0;
+        transition: all 0.3s;
+    }
+}
+
+.menu {
+    color: lightgray;
+    font-size: 1.5em;
+    position: absolute;
+    top: 10px;
+    left: 40px;
+    z-index: 100;
+    transition: all 0.3s;
+    i {
+        margin-left: 20%;
+        opacity: 0.7; 
+        transform: scale(1);
+        transition: all 0.3s;
+
+        &:hover {
+            opacity: 0.5;
+            transform: scale(1.2);
+            transition: all 0.3s;
+        }
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 50;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+  
+    &.open {
+        opacity: 0.5;
+        visibility: visible;
+        height: 100%;
+    } 
+}
+// ----------------------------------------------------------------------
+// -----------------------------GLOBALES---------------------------------
+// ----------------------------------------------------------------------
+
+
+
+h1 {
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+h1, h5 {
+    font-weight: bold;
+}
+// ----------------------------------------------------------------------
+// -----------------------------CONTENEDOR---------------------------------
+// ----------------------------------------------------------------------
+
+.contenedor {
+    text-align: center;
+    padding-top: 45px;
+}
+.contenedor img {
+    border-radius: 200px 200px 200px 200px;
+    -moz-border-radius: 200px 200px 200px 200px;
+    -webkit-border-radius: 200px 200px 200px 200px;
+    border: 1px solid #7104ff;
+    width: 200px;
+    height: 200px;
+}
+
+#perfil h4{
+    padding: 23px;
+    letter-spacing: 0.3em;
+}
+.redes{
+    margin: 0 auto;
+}
+
+.redes i {
+    color: gray;
+    font-size: 2em;
+}
+
+.redes i:nth-child(2) {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#mis-cursos img{
+    width: 100px;
+}
+#mis-cursos span{
+    font-size: 14px;
+}
+
+#mis-cursos h3 {
+    text-align: center;
+}
+
+// ----------------------------------------------------------------------
+// -----------------------------OPCIONES---------------------------------
+// ----------------------------------------------------------------------
+
+
+.dropdown-menu {
+    width: 95%;
+    padding-left: 10px;
+}
+a, .btn-forma button {
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    padding-left: 5px;
+
+}
+.btn-forma {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#perfil{
+    height: 400px;
+    width: 100%;
+    background: rgba(0,85,255,1);
+    background: -moz-linear-gradient(-45deg, rgba(0,85,255,1) 0%, rgba(3,245,233,1) 57%, rgba(3,245,233,1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(0,85,255,1)), color-stop(57%, rgba(3,245,233,1)), color-stop(100%, rgba(3,245,233,1)));
+    background: -webkit-linear-gradient(-45deg, rgba(0,85,255,1) 0%, rgba(3,245,233,1) 57%, rgba(3,245,233,1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(0,85,255,1) 0%, rgba(3,245,233,1) 57%, rgba(3,245,233,1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(0,85,255,1) 0%, rgba(3,245,233,1) 57%, rgba(3,245,233,1) 100%);
+    background: linear-gradient(135deg, rgba(0,85,255,1) 0%, rgba(3,245,233,1) 57%, rgba(3,245,233,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0055ff', endColorstr='#03f5e9', GradientType=1 );
+}
+#mis-cursos{
+    padding: 20px;
+}
+.progress-bar{
+    width: 50%;
+}
+#iniciados{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#iniciados .row{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#completados{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#completados .row{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+
+
+
+// ----------------------------------------------------------------------
+// -----------------------------RESPONSEIVE ---------------------------------
+// ----------------------------------------------------------------------
+
+
+@media only screen and (min-width: 480px) {
+  
+    #settings {
+        margin-top: 70px;
+        margin-left: 180px;
+        background-image: url("https://i.ibb.co/7KCz5Js/lazo.gif");
+        background-repeat: no-repeat;
+        background-position: top;
+        background-attachment: scroll;
+        background-size: contain;
+    }
+
+    #perfil {
+        background: transparent;
+    }
+
+    #perfil .contenedor {
+        margin-top: 50px;
+    }
+
+    .redes i {
+        color: black;
+    }
+    
+    .redes i:nth-child(2) {
+        padding-left: 65px;
+        padding-right: 65px;
+    }
+
+    // ----------------------------------------------------------------------
+    // -----------------------------MIS CURSOS---------------------------------
+    // ----------------------------------------------------------------------
+
+    #mis-cursos span {
+        font-size: 1.3em;
+
+    }
+
+    // ----------------------------------------------------------------------
+    // -----------------------------OPCIONES---------------------------------
+    // ----------------------------------------------------------------------
+
+    #opciones {
+        border: 1px solid darkblue;
+        margin-left: 12%;
+        padding-left: 40px;
+        padding-right: 80px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        color: white;
+        background-color: #7104ff;
+        border-radius: 23px 23px 23px 23px;
+        -moz-border-radius: 23px 23px 23px 23px;
+        -webkit-border-radius: 23px 23px 23px 23px;
+        border: 0px solid #000000;
+    }
+
+    #opciones a, #opciones input, #opciones button {
+        color: white;
+
+
+    }
+
+    #opciones .btn-encuesta-1{
+        padding-left: 90px;
+        padding-right: 90px;
+    }
+
+
+    #opciones .dropdown, #opciones .btn-encuesta-1, #opciones .btn-encuesta-2 {
+        display: inline;
+
+    }
+
+    
+
+    
+}
+
+
+
+
+

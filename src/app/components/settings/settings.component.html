@@ -1,0 +1,105 @@
+<div class="row" id='settings'>
+
+    <section id="perfil" class = 'col-12 col-md-6'>
+        <div class="row">
+            <div class="contenedor d-block col-12 col-md-6">
+                    <div class="container d-block d-sm-none">
+                            <div class="menu-container" id="toggle">
+                                <a href="#" class="menu" (click)='toggleMenu($event)'><i class="fa fa-bars" aria-hidden="true"></i></a>
+                            </div>
+                                
+                             </div>
+                                <div class="overlay" id="overlay">
+                             <nav class="overlay-menu">
+                                <section class="opciones">
+                                        <div class="row">
+                                            <div class="col-12 col-md-6">
+                                                <div class="dropdown btn-azul">
+                                                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        Cambiar contraseña
+                                                    </button>
+                                
+                                                    <div class="dropdown-menu">
+                                                        Nueva contraseña<br>
+                                                        <input type="password"><br>
+                                                        Repetir contraseña<br>
+                                                        <input type="password">
+                                                    </div>
+                                                <p class="btn-forma btn-lila" routerLink="/survey">
+                                                    <a routerLink = '/survey'>Volver a hacer la encuesta</a>
+                                                </p>
+                                
+                                                <p class="btn-forma btn-azul">
+                                                    <a href="">Eliminar perfil</a>
+                                                </p>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                             </nav>
+                        </div>
+                        
+                <img src="https://img.freepik.com/vector-gratis/perfil-empresario-dibujos-animados_18591-58479.jpg?size=338&ext=jpg" alt="foto de usuario">
+                
+                <h4>Marcos Moreno</h4>
+                <div class="redes">
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fab fa-linkedin"></i>
+                    <i class="fab fa-github-square"></i>
+                </div>
+            </div>
+        </div> 
+    </section>
+
+    <section id= 'mis-cursos'>
+        <h3>Mis cursos</h3>
+        <article id="iniciados">
+            <h5>Iniciados</h5>
+            <div class="row">
+                <img class='col-3'src="https://i.ibb.co/PNKSzy2/FO123.gif" alt="">
+                <span class = 'col-9'>Diseño web Front-End HTML CSS y JS</span>
+            </div>
+        </article>
+        
+        <article id="completados">
+            <h5>Completados</h5>
+                <div class= "row" >
+                    <img class="col-3"src="https://i.ibb.co/8DgxhTn/FSO1.gif" alt="">
+                    <span class ='col-9'>Curso de Desarrollo avanzado con AngularJS 1.5 y JS</span>
+
+             </div>
+                <div class= "row">
+                    <img class="col-3" src="https://i.ibb.co/8YTX0FQ/BPT1.gif" alt="">
+                    <span class ='col-9'>Curso de programación en PHP JS y MySQL</span>
+                </div>
+                        
+        </article>
+    </section>
+
+
+    <div id="opciones" class="d-none d-sm-block">
+
+        <div class="dropdown">
+            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Cambiar contraseña
+            </button>
+
+            <div class="dropdown-menu">
+                Nueva contraseña<br>
+                <input type="password"><br>
+                Repetir contraseña<br>
+                <input type="password">
+            </div>
+        </div>
+        
+        <div class="btn-encuesta-1">
+            <a routerLink = '/survey'>Volver a hacer la encuesta</a>
+        </div>
+
+        <div class="btn-encuesta-2">
+            <a href="">Eliminar perfil</a>
+        </div>
+
+    </div>
+
+</div>

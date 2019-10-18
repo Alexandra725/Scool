@@ -1,0 +1,85 @@
+.logo img{
+    width: 30%;
+    padding: 10px;
+  }
+
+  .links div{
+    padding-top: 6px;
+  }
+
+   .d-sm-none img{
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    
+   }
+
+   .d-block img:hover{
+     background-color: #17f5d3;
+   }
+
+   #inicio{
+     margin-left: 170px;
+     display: block;
+     margin-top: -53px;
+   }
+
+   #perfil{
+     float: right;
+     display: block;
+     margin-top: -53px;
+   }
+
+  @media only screen  and (min-width: 480px) {
+
+    .sidebar{
+      height: 45px;
+      background-color: transparent !important;
+    }
+
+    .links{
+      border-style: none;
+      float: right;
+      border-radius: 30px 30px 30px 30px;
+      background:#7104ff;
+      height: 40px;
+      width: 300px;
+      margin-right: 50px;
+      text-align: center;
+      margin-top: 5px;
+
+    }
+
+    .links a {
+    font-family: 'Raleway';
+    font-size: 600;
+    font-size: 20px;
+    padding-right: 10px;
+    color:white;
+    }
+
+    .links a:hover {
+    background: transparent !important;
+
+    }
+
+    .links div{
+    padding-top: 6px;
+    }
+
+    .logo img{
+    padding: 10px;
+    width: 180px;
+    height: 70px;
+    float: left;
+    }
+
+    #inicio{
+      width: 18px;
+      height: 18px;
+    }
+    #perfil{
+      width: 18px;
+      height: 18px;
+    }
+  }

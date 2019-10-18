@@ -1,0 +1,46 @@
+<div class="box">
+    <div class="registro">
+            <h1>¡Registrate!</h1>
+      <form name="form" (ngSubmit)="f.form.valid && register()" #f="ngForm" novalidate>
+            <div class="form-row" [ngClass]="{ 'has-error': f.submit && !name.valid }">
+              <div class="form-group col-md-6">
+                <label for="inputEmail4">Nombre</label>
+                <input type="text" [(ngModel)]="registerForm.nombre" class="form-control" id="nombre" name="nombre" #firstName="ngModel" required>
+                <div *ngIf="f.submitted && !nombre.valid" class="help-block">Es obligatorio</div>
+              </div>
+
+              <div class="form-group col-md-6" [ngClass]="{ 'has-error': f.submit && !apellido.valid }">
+                <label for="inputPassword4">Apellido</label>
+                <input type="text" [(ngModel)]="registerForm.apellido" class="form-control" id="apellido" name="apellido" #lastName="ngModel" required>
+                <div *ngIf="f.submitted && !apellido.valid" class="help-block">Es obligatorio</div>
+              </div>
+            </div>
+
+            <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+              <label for="inputAddress">Username</label>
+              <input type="text" [(ngModel)]="registerForm.user" class="form-control" id="username" name="username" #username="ngModel" required>
+              <div *ngIf="f.submitted && !username.valid" class="help-block">Es obligatorio</div>
+            </div>
+        </form>
+      <form>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !email.valid }">
+          <label for="Email">Email</label>
+          <input type="email" [(ngModel)]="registerForm.email" class="form-control" id="email" aria-describedby="emailHelp" name="email" #email="ngModel" required>
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          <div *ngIf="f.submitted && !emailvalid" class="help-block">Es obligatorio</div>
+        </div>
+        <div class="form-group"  [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+          <label for="Contraseña">Contraseña</label>
+          <input type="password" [(ngModel)]="registerForm.password" class="form-control" id="password" name="password">
+          <div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
+        </div>
+        <button [disabled]="loading" (click)="register()" class="btn-color btn-forma">Registrar</button>
+        <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+        <a [routerLink]="['/auth/login-form']" class="btn btn-link"></a>
+      </form>
+      
+  </div>
+      <button type="submit" class="btn-color btn-forma" id="cuenta" routerLink="/auth/login-form">Ya tengo cuenta</button>
+</div>
+
+<router-outlet></router-outlet>

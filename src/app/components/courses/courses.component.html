@@ -1,0 +1,41 @@
+<section id="curso-recomendado" class="row">
+
+    <div class="col-12 col-md-6">
+        <img src="https://i.ibb.co/sHn5Tpc/B01.gif" alt="Img curso recomendado">
+    </div>
+
+    <div class="col-12 col-md-6 texto">
+        <h2>{{courseSelected['Nombre']}}</h2>
+        <p>{{courseSelected['Descripción']}}</p>
+        <button type="button" class="btn-forma" (click)="changingStatus()">
+        <a href="https://www.coursera.org/learn/server-side-nodejs" target="_blank">Inscribirme</a>
+      </button>
+
+    </div>
+
+</section>
+
+<section id="otros-cursos">
+
+    <h2>Otros cursos</h2>
+
+    <div class="row">
+
+        <div class="col-12 col-md-4" *ngFor="let course of courses">
+            <div class="tarjeta">
+                <img src="https://sisanjuan2-imagenysistemas.netdna-ssl.com/media/k2/items/cache/cad4d73ce730805a560f68d2fafb8c6b_L.jpg" alt="img0">
+                <div class="texto">
+                    <h3>{{ course['Nombre']}}</h3>
+                    <p>{{ course['Descripción']}}</p>
+                    <button type="button" class="btn-forma d-bloc">
+					<a [href]="course.link" target="_blank">Ver más</a>
+				</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</section>

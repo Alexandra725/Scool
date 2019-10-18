@@ -1,0 +1,103 @@
+.contenedor {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+ }
+
+.title{
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+}
+
+.preguntas {
+  border: rgb(202, 202, 255);
+  text-align: justify;
+  margin: 5px;
+  padding-top: 20px;
+  font-family: 'Manjari', sans-serif;
+}
+
+button{
+  padding:15px 20px 15px;
+  border-radius: 45px;
+  margin: 5px;
+  align-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: transparent;
+}
+
+button:hover{
+  color: rgb(0, 26, 255);
+  background-color: aliceblue;
+}
+
+.contador{
+  color: rgb(87, 16, 219);
+  text-align: center;
+  margin: 5px;
+  padding-top: 20px;
+  font-family: 'Manjari', sans-serif;
+}
+
+.logo img{
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  padding: 5%;
+  }
+
+
+@media only screen and (min-width: 480px) {
+
+  .contenedor {
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 0px;
+   }
+
+  .title{
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    padding-top: -130px;
+  }
+
+  .preguntas {
+    border: rgb(202, 202, 255);
+    text-align: center;
+    margin: 5px;
+    padding-top: 20px;
+    font-size: 20px;
+    font-family: 'Manjari', sans-serif;
+  }
+
+  button{
+    padding:15px 20px 15px;
+    border-radius: 45px;
+    margin: 17px;
+    align-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+  }
+
+  button:hover{
+    color: rgb(0, 26, 255);
+    background-color: aliceblue;
+  }
+
+  .contador{
+    color: rgb(87, 16, 219);
+    text-align: center;
+    margin: 5px;
+    padding-top: 20px;
+    font-family: 'Manjari', sans-serif;
+  }
+
+  .logo img{
+    width: 45%;
+    display: block;
+    }
+  }
